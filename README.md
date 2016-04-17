@@ -14,7 +14,7 @@ A simple jQuery lightbox plugin for images all you need is to add a class.
 
 ###### Add Class Name to the Images you want to add a light box for
 ```html
-  <img src="" class=""/>
+  <img src="your/image.png" class="lightbox"/>
 ```
 
 ###### Start of LightBox.js Javascript
