@@ -1,5 +1,5 @@
 # lightBox.js
-A simple jQuery lightbox plugin for images all you need is to add a class.
+A simple jQuery lightbox plugin for adding pop up lightboxs to images. All you need to do is to add a class to the image of your choice.
 
 ### Example
 ![alt tag](http://www.kelly.tech/static/img/lightbox.png)
