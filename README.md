@@ -1,64 +1,46 @@
-# lightBox.js
-A simple jQuery lightbox plugin for adding pop up lightboxs to images. All you need to do is to add a class to the image of your choice.
+# LightBox.js
+A simple jQuery lightbox plugin for adding pop up lightboxes to images. Requires jQuery.
 
-### Example
-![alt tag](http://www.kelly.tech/static/img/lightbox.png)
-[View LightBox.js Demo](http://lightbox.kelly.tech/)
+### How to use the plugin
 
-### External styling sheets that are needed:
-- [Get Bootstrap](http://getbootstrap.com/)
-- [Jquery](https://jquery.com/)
-- [Google Font](https://www.google.com/fonts)
-
-### How to show ligthbox image when click on image with JavaScript
-
-###### Add Class Name to the Images you want to add a light box for
+###### Include the plugin stylesheet and javascript to your page
 ```html
-  <img src="your/image.png" class="lightbox"/>
+<!-- Somewhere in the header -->
+<link rel="stylesheet" href="./src/lightbox.css">
+
+<!-- Somewhere in the footer after jQuery -->
+<script src="./src/lightbox.js"></script>
+```
+
+###### Define the images you want to use LightBox.js on 
+```html
+<!-- Somewhere in your page -->
+<img class='lightbox' src='./images/img1.jpg' />
+<img class='lightbox' src='./images/img2.jpg' />
 ```
 
 ###### Start of LightBox.js Javascript
 ```javascript
-  $(document).ready(function () {
-  /* Add class name on image */
-  $('.lightbox').click(function () {
-  var data = $(this).data("class");
-  console.log('You clicked the image');
-  var windowHeight = window.innerHeight || $(window).height(),
-  windowWidth = window.innerWidth || $(window).width();
-  /* Create the overlay, append it to body and make it visible.*/
-  $('
-  ')
-  .css('opacity', '0')
-  .animate({
-  'opacity': '0.5'
-  }, 'slow')
-  .appendTo('body');
-  /* Create the lightbox container which shall contain the image */
-  $('
-  ')
-  .hide()
-  .appendTo('body');
-  /* Create img-element and add to #lightbox when loaded.*/
-  $('')
-  .attr('src', $(this).attr('src'))
-  .css({
-  'max-height': windowHeight,
-  'max-width': windowWidth })
-  .load(function () {
-  $('#lightbox')
-  .css({
-  'top': (windowHeight - $('#lightbox').height()) / 2,
-  'left': (windowWidth - $('#lightbox').width()) / 2
-  })
-  .fadeIn();
-  }) .appendTo('#lightbox');
-  /* Remove lightbox on click */
-  $('#overlay, #lightbox').click(function () {
-  $('#overlay, #lightbox').remove();
-  });
-  console.log("Display image in colorbox.");
-  });
-  console.log('Everything is ready.');
-  });
-  ```
+<script type="text/javascript">
+	$(".lightbox").lightbox();
+</script>
+```
+
+### Using LightBox.js with settings
+Settings exposed are:
+
+- 'bgcolor' Controls the background color of the lightbox. (Defaults to rgba(3,3,3,0.8) or rgb(3,3,3) on browsers that do not support transparency.)
+
+
+- 'closeButton' Controls whether to show a close button at the top of the lightbox. When enabled, only the close button will close the lightbox. Default behaviour will allow the lightbox to be closed when the user clicks anywhere on the screen. (Defaults to false.)    
+
+To use the plugin with custom settings, simply include them when you call the plugin, like so: 
+
+```javascript
+<script type="text/javascript">
+	$(".lightbox").lightbox({
+    		'bgcolor'       : 'rgba(67, 153, 156, 0.8)',
+    		'closeButton'   : true	
+	});
+</script>
+```
