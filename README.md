@@ -25,3 +25,22 @@ A simple jQuery lightbox plugin for adding pop up lightboxes to images. Requires
 	$(".lightbox").lightbox();
 </script>
 ```
+
+### Using LightBox.js with settings
+Settings exposed are:
+
+- 'bgcolor' Controls the background color of the lightbox. (Defaults to rgba(3,3,3,0.8) or rgb(3,3,3) on browsers that do not support transparency.)
+
+
+- 'closeButton' Controls whether to show a close button at the top of the lightbox. When enabled, only the close button will close the lightbox. Default behaviour will allow the lightbox to be closed when the user clicks anywhere on the screen. (Defaults to false.)    
+
+To use the plugin with custom settings, simply include them when you call the plugin, like so: 
+
+```javascript
+<script type="text/javascript">
+	$(".lightbox").lightbox({
+    		'bgcolor'       : 'rgba(67, 153, 156, 0.8)',
+    		'closeButton'   : true	
+	});
+</script>
+```
