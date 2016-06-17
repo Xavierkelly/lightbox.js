@@ -1,6 +1,8 @@
 # LightBox.js
 A simple jQuery lightbox plugin for adding pop up lightboxes to images. Requires jQuery.
 
+# [View LightBox.Js Demo](http://lightbox.kelly.tech/)
+
 ### How to use the plugin
 
 ###### Include the plugin stylesheet and javascript to your page
