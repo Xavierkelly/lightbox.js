@@ -26,3 +26,39 @@
     width: 20px;
     height: 20px;
 }
+body{
+    margin-top:90px;
+    background-color:#2980b9;
+}
+nav{
+    background-color:#fff;
+}
+#imgHolder{
+    padding-bottom:5px;
+}
+.imgSize{
+    height:25px;
+}
+#docLink{
+    text-align:right; 
+    float:right;
+    padding:15px;
+}
+#docBtn{
+    color:#151515;
+}
+.header{
+    text-align: center;
+    font-size:70px;
+    color:white;
+}
+#description{
+    text-align: center; 
+    color:#f1f1f1;
+    font-size:12px;
+    padding-bottom:10px;
+    margin-bottom:10px;
+}
+.fullWidth{
+    width: 100%
+}
