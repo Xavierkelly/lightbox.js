@@ -1,0 +1,45 @@
+<!DOCTYPE>
+<html class="no-js sidebar-large">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LightBox.js</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/style.min.css">
+    <link rel="stylesheet" href="./dist/lightbox.min.css">
+</head>
+
+<body>
+
+<h1>LightBox.js</h1>
+
+<p>
+    A jQuery lightbox plugin for images. Click an image to view it in a lightbox.
+</p>
+
+<div>
+<div class="md-up-half left">
+    <img class='lightbox thumbnail' src='./images/img1.jpg' />
+</div>
+
+<div class="md-up-half right">
+    <img class='lightbox thumbnail'src='./images/img2.png' />
+</div>
+</div>
+
+<a href="http://github.com/georgejenkins/lightbox.js">
+    <button>LightBox.js on Github</button>
+</a>
+
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="./dist/lightbox.min.js"></script>
+
+<script type="text/javascript">
+
+$(".lightbox").lightbox();
+
+</script>
+</body>
+</html>
